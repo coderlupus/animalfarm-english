@@ -4,7 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Globe } from 'lucide-react';
 
 const LanguageToggle: React.FC = () => {
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage } = useLanguage();
 
   return (
     <div className="flex items-center gap-2">
@@ -18,7 +18,7 @@ const LanguageToggle: React.FC = () => {
           aria-pressed={language === 'en'}
           aria-label="Switch to English"
         >
-          {t('language.english')}
+          English
         </Button>
         <Button
           variant={language === 'pt' ? 'revolutionary' : 'ghost'}
@@ -28,7 +28,7 @@ const LanguageToggle: React.FC = () => {
           aria-pressed={language === 'pt'}
           aria-label="Mudar para Português"
         >
-          {t('language.portuguese')}
+          Português
         </Button>
       </div>
     </div>

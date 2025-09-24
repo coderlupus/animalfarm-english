@@ -109,7 +109,8 @@ const translations = {
     // UI Elements
     'language.toggle': 'Language',
     'language.english': 'English',
-    'language.portuguese': 'Português'
+    'language.portuguese': 'Portuguese',
+    'footer.ourGroup': 'Our group: Nathan Lopes, Tomé Galileu, Anderson, Assucena • 2025'
   },
   pt: {
     // Navigation
@@ -208,8 +209,9 @@ const translations = {
     
     // UI Elements
     'language.toggle': 'Idioma',
-    'language.english': 'English',
-    'language.portuguese': 'Português'
+    'language.english': 'Inglês',
+    'language.portuguese': 'Português',
+    'footer.ourGroup': 'Nosso grupo: Nathan Lopes, Tomé Galileu, Anderson, Assucena • 2025'
   }
 };
 
@@ -217,7 +219,9 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   const [language, setLanguage] = useState<Language>('en');
   
   const t = (key: string): string => {
-    return translations[language][key] || translations['en'][key] || key;
+    const lang = translations[language] || translations.en;
+    const translation = lang[key as keyof typeof lang] || translations.en[key as keyof typeof translations.en];
+    return translation || key;
   };
 
   return (
