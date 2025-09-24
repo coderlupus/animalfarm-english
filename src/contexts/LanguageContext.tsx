@@ -110,7 +110,7 @@ const translations = {
     'language.toggle': 'Language',
     'language.english': 'English',
     'language.portuguese': 'Portuguese',
-    'footer.ourGroup': 'Our group: Nathan Lopes, Tomé Galileu, Anderson, Assucena • 2025'
+    'footer.ourGroup': 'Our group: Nathan Lopes, Tomé Galileu, Anderson Gabriel, Assucena Dantas • 2025'
   },
   pt: {
     // Navigation
@@ -211,7 +211,7 @@ const translations = {
     'language.toggle': 'Idioma',
     'language.english': 'Inglês',
     'language.portuguese': 'Português',
-    'footer.ourGroup': 'Nosso grupo: Nathan Lopes, Tomé Galileu, Anderson, Assucena • 2025'
+    'footer.ourGroup': 'Nosso grupo: Nathan Lopes, Tomé Galileu, Anderson Gabriel, Assucena Dantas • 2025'
   }
 };
 
