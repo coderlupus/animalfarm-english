@@ -8,7 +8,7 @@ const LanguageToggle: React.FC = () => {
 
   return (
     <div className="flex items-center gap-2">
-      <Globe className="h-4 w-4 text-muted-foreground" />
+      <Globe className="h-4 w-4 text-white" />
       <div className="flex rounded-lg border border-border overflow-hidden">
         <Button
           variant={language === 'en' ? 'revolutionary' : 'ghost'}

@@ -47,7 +47,9 @@ const Navigation: React.FC = () => {
           {/* Logo/Title */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="font-propaganda text-xl text-primary hover:text-accent transition-colors"
+            className={`font-propaganda text-xl transition-colors ${
+      isVisible ? 'text-primary hover:text-accent' : 'text-white hover:text-gray-200'
+ }`}
           >
             {t('hero.title')}
           </button>

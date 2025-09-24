@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
         
         <div className="border-t border-primary-foreground/20 pt-6 mt-6">
           <p className="text-sm text-primary-foreground/60">
-            {t('hero.author')} • University Presentation • 2024
+            Our group: Nathan Lopes, Tomé Galileu, Anderson, Assucena • 2025
           </p>
         </div>
       </div>
