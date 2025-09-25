@@ -38,7 +38,7 @@ const Navigation: React.FC = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || isMobileMenuOpen
           ? 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border'
           : 'bg-transparent'
       }`}
@@ -49,7 +49,7 @@ const Navigation: React.FC = () => {
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className={`font-propaganda text-xl transition-colors ${
-              isScrolled ? 'text-primary hover:text-accent' : 'text-white hover:text-gray-200'
+              isScrolled || isMobileMenuOpen ? 'text-primary hover:text-accent' : 'text-white hover:text-gray-200'
             }`}
           >
             {t('hero.title')}
@@ -77,7 +77,7 @@ const Navigation: React.FC = () => {
             <Button
               variant="ghost"
               size="icon"
-              className={isScrolled ? "" : "text-white"}
+              className={isScrolled || isMobileMenuOpen ? "" : "text-white"}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
@@ -88,14 +88,14 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className={`md:hidden mt-4 pb-4 border-t ${isScrolled ? "border-border" : "border-white/20"}`}>
+          <div className={`md:hidden mt-4 pb-4 border-t ${isScrolled || isMobileMenuOpen ? "border-border" : "border-white/20"}`}>
             <div className="flex flex-col gap-2 mt-4">
               {navItems.map((item) => (
                 <Button
                   key={item.key}
                   variant="ghost"
                   onClick={() => scrollToSection(item.href)}
-                  className={`justify-start ${isScrolled ? "hover:text-primary hover:bg-primary/10" : "text-white hover:bg-white/10"}`}
+                  className={`justify-start ${isScrolled || isMobileMenuOpen ? "hover:text-primary hover:bg-primary/10" : "text-white hover:bg-white/10"}`}
                 >
                   {item.label}
                 </Button>
